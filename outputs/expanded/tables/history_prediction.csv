@@ -1,0 +1,7 @@
+sample,model,n,mae,r2
+All strict matches,Repeat previous finish,4922,15.142553839902478,0.7087410573369285
+All strict matches,Demographics,4922,27.8407959340531,0.19513915024899375
+All strict matches,Demographics + previous finish,4922,15.759379701025411,0.7340757946046537
+Also same city/state,Repeat previous finish,4400,15.15692424242424,0.7032430237114089
+Also same city/state,Demographics,4400,27.67236268196738,0.19649795942733683
+Also same city/state,Demographics + previous finish,4400,15.708628296431435,0.7311579319279368

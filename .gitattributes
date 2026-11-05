@@ -1,0 +1,8 @@
+* text=auto eol=lf
+*.png binary
+*.zip binary
+*.ipynb linguist-documentation
+*.html linguist-generated
+outputs/** linguist-generated
+data/catalog/** linguist-generated
+requirements-lock.txt linguist-generated

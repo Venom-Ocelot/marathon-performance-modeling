@@ -1,0 +1,11 @@
+{
+  "dataset": "aiaiaidavid/berlin-marathons-data",
+  "version": 2,
+  "url": "https://www.kaggle.com/datasets/aiaiaidavid/berlin-marathons-data",
+  "license_as_listed": "CC0: Public Domain",
+  "downloaded_utc": "2026-11-02T08:49:04.834147+00:00",
+  "files": {
+    "Berlin_Marathon_data_1974_2019.csv": "bcc454bb7382cc34acc0d1fd359b55258bf25eea48323fd7fcb6d3053396c7f2",
+    "Berlin_Marathon_weather_data_since_1974.csv": "1d17485672c62b83df99823dfb6af2345e01e099a8e59d448cfe89327189bf41"
+  }
+}

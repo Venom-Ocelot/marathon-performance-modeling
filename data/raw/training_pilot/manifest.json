@@ -1,0 +1,10 @@
+{
+  "dataset": "girardi69/marathon-time-predictions",
+  "version": 2,
+  "url": "https://www.kaggle.com/datasets/girardi69/marathon-time-predictions",
+  "license_as_listed": "CC0: Public Domain",
+  "downloaded_utc": "2026-11-02T09:57:38.820842+00:00",
+  "files": {
+    "MarathonData.csv": "10bad8e52cc25a797555220cfcccc3fc54c4077ba2557fdbbdfc88641163401e"
+  }
+}

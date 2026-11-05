@@ -1,0 +1,5 @@
+source,raw_rows,eligible_rows,analysis_rows,inference_unit_count,note
+Chicago,886546,877341,852085,26,Ages 20–69; main weather fit excludes interrupted 2007.
+Fall marathons,2053366,1990309,1624823,199,"21 races, >=8 eligible years; overlaps Chicago."
+Boston 2015–2017,79638,79576,79576,3,Three event years; repeated participants possible.
+Boston 2024,17220,17169,17169,751,29 unmatched ZIPs; 22 conflicting-bib rows excluded; one event.

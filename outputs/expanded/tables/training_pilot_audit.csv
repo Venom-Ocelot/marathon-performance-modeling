@@ -1,0 +1,6 @@
+check,value
+Rows,87.0
+Missing cross-training entries,74.0
+Missing demographic category,6.0
+Speed entries above 40 (declared speed context),1.0
+Maximum recorded speed field,11125.0

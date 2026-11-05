@@ -1,0 +1,12 @@
+{
+  "dataset": "runningwithrock/chicago-marathon-results",
+  "version": 3,
+  "url": "https://www.kaggle.com/datasets/runningwithrock/chicago-marathon-results",
+  "license_as_listed": "MIT",
+  "downloaded_utc": "2026-11-02T09:57:38.282955+00:00",
+  "files": {
+    "Chicago Marathon Weather.csv": "9140e367f652d9d5a202060b2569c1900361b7b8d06e7c4e07a636557e736588",
+    "Chicago Marathon Results.csv": "6ba07df834eb0c61f368055a72c7d2085ecdd66cbc878c90a837637dd5c88950",
+    "Chicago Marathon Qualifying Times.csv": "e443124c77f3ecea3f03c412528a0531027f433bca5b3793255f47c86967854d"
+  }
+}

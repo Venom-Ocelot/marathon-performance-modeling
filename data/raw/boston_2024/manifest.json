@@ -1,0 +1,12 @@
+{
+  "dataset": "runningwithrock/2024-boston-marathon-weather-and-splits",
+  "version": 2,
+  "url": "https://www.kaggle.com/datasets/runningwithrock/2024-boston-marathon-weather-and-splits",
+  "license_as_listed": "Attribution 4.0 International (CC BY 4.0)",
+  "downloaded_utc": "2026-11-02T09:57:38.003520+00:00",
+  "files": {
+    "Weather.csv": "c96af3355339543a45247e942b665b078d3837681b5be2c8a7935aa2d0add835",
+    "Athletes.csv": "875b982ffd8a6dcfb6818d3350bd8cc19bcba815542eb50a8053a2044f08d839",
+    "BQStandards.csv": "6f90a28fcb2f004e1207b128d4a4b98f7282d81e19b9826ed92de973cf10f2b9"
+  }
+}

@@ -1,0 +1,175 @@
+{
+  "n_raw": 884944,
+  "n_analysis": 629545,
+  "n_years": 20,
+  "n_2019_male_only": 30796,
+  "n_train": 449530,
+  "n_test": 180015,
+  "mean_minutes": 248.04308106118975,
+  "median_minutes": 243.38333333333333,
+  "p10": 196.6,
+  "p90": 304.19333333333293,
+  "temperature_min": 8.9,
+  "temperature_max": 19.4,
+  "primary_tests": [
+    {
+      "hypothesis": "Female minus male (minutes)",
+      "estimate": 27.101107242556047,
+      "ci_low": 26.269115661267957,
+      "ci_high": 27.933098823844137,
+      "p_value": 3.546317522298777e-24,
+      "n_years": 20,
+      "p_holm": 1.063895256689633e-23,
+      "reject_at_0_05": true
+    },
+    {
+      "hypothesis": "Age 60\u201364 minus 30\u201334 (minutes)",
+      "estimate": 30.100532805664,
+      "ci_low": 27.73833483287186,
+      "ci_high": 32.46273077845614,
+      "p_value": 1.6099634419178012e-16,
+      "n_years": 20,
+      "p_holm": 3.2199268838356025e-16,
+      "reject_at_0_05": true
+    },
+    {
+      "hypothesis": "Temperature (minutes per 1\u00b0C)",
+      "estimate": 1.290870315537909,
+      "ci_low": 0.8328644812771189,
+      "ci_high": 1.7488761497986993,
+      "p_value": 1.5939222848321032e-05,
+      "n_years": 20,
+      "p_holm": 1.5939222848321032e-05,
+      "reject_at_0_05": true
+    }
+  ],
+  "prediction_metrics": [
+    {
+      "model": "Training mean",
+      "mae": 36.72952349214182,
+      "rmse": 46.66323345079512,
+      "r2": -0.012294735353354236
+    },
+    {
+      "model": "Age + sex",
+      "mae": 34.39202063128963,
+      "rmse": 43.70699142498558,
+      "r2": 0.11190557165964099
+    },
+    {
+      "model": "Age + sex + year",
+      "mae": 34.4614604240895,
+      "rmse": 43.65468957497425,
+      "r2": 0.11402977140668447
+    },
+    {
+      "model": "Age + sex + year + temperature",
+      "mae": 34.863327090361004,
+      "rmse": 43.63254969867233,
+      "r2": 0.1149281993843787
+    },
+    {
+      "model": "Full without sex",
+      "mae": 36.43508107980826,
+      "rmse": 45.435422001004966,
+      "r2": 0.04027578657593933
+    },
+    {
+      "model": "Full without age",
+      "mae": 35.80890118967665,
+      "rmse": 44.743542520605395,
+      "r2": 0.0692821320075443
+    }
+  ],
+  "sensitivity": [
+    {
+      "specification": "Primary: age 20\u201369, linear trend",
+      "slope": 1.290870315537909,
+      "ci_low": 0.8328644812771189,
+      "ci_high": 1.7488761497986993,
+      "n_years": 20
+    },
+    {
+      "specification": "No calendar trend",
+      "slope": 1.0979183654106,
+      "ci_low": 0.5367992960934744,
+      "ci_high": 1.6590374347277255,
+      "n_years": 20
+    },
+    {
+      "specification": "Quadratic calendar trend",
+      "slope": 1.4233484777452015,
+      "ci_low": 1.138015564463417,
+      "ci_high": 1.708681391026986,
+      "n_years": 20
+    },
+    {
+      "specification": "Add daily precipitation",
+      "slope": 1.3356168230923213,
+      "ci_low": 0.8683945466653012,
+      "ci_high": 1.8028390995193413,
+      "n_years": 20
+    },
+    {
+      "specification": "Include 70\u201384, pooled with 65\u201369",
+      "slope": 1.2902360925050695,
+      "ci_low": 0.8326873140665729,
+      "ci_high": 1.7477848709435662,
+      "n_years": 20
+    },
+    {
+      "specification": "Trim outer 1% of finish times",
+      "slope": 1.173531662518862,
+      "ci_low": 0.7391573507409654,
+      "ci_high": 1.6079059742967587,
+      "n_years": 20
+    },
+    {
+      "specification": "Later period: 2005\u20132018",
+      "slope": 1.349089950050507,
+      "ci_low": 0.9945399935053214,
+      "ci_high": 1.7036399065956924,
+      "n_years": 14
+    },
+    {
+      "specification": "Primary, lag-1 HAC errors",
+      "slope": 1.290870315537909,
+      "ci_low": 0.9090183097703799,
+      "ci_high": 1.6727223213054383,
+      "n_years": 20
+    }
+  ],
+  "loo_slope_min": 1.1350234380798376,
+  "loo_slope_max": 1.3520825173269824,
+  "interaction": {
+    "slope": 0.2212183352686366,
+    "ci_low": -0.2626575193644088,
+    "ci_high": 0.705094189901682,
+    "p_value": 0.3482842675901212
+  },
+  "friedman_p": 1.663417361849822e-29,
+  "raw_trend_change": 22.44741162136313,
+  "standardized_trend_change": 15.87437316542406,
+  "source": {
+    "dataset": "aiaiaidavid/berlin-marathons-data",
+    "version": 2,
+    "url": "https://www.kaggle.com/datasets/aiaiaidavid/berlin-marathons-data",
+    "license_as_listed": "CC0: Public Domain",
+    "downloaded_utc": "2026-11-02T08:49:04.834147+00:00",
+    "files": {
+      "Berlin_Marathon_data_1974_2019.csv": "bcc454bb7382cc34acc0d1fd359b55258bf25eea48323fd7fcb6d3053396c7f2",
+      "Berlin_Marathon_weather_data_since_1974.csv": "1d17485672c62b83df99823dfb6af2345e01e099a8e59d448cfe89327189bf41"
+    }
+  },
+  "environment": {
+    "python": "3.12.3",
+    "pandas": "3.1.0",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "seaborn": "0.13.2",
+    "statsmodels": "0.15.0",
+    "scikit-learn": "1.9.1",
+    "nbformat": "5.11.1"
+  }
+}

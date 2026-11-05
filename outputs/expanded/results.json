@@ -1,0 +1,657 @@
+{
+  "sources": [
+    {
+      "source": "chicago",
+      "dataset": "runningwithrock/chicago-marathon-results",
+      "version": 3,
+      "license": "MIT",
+      "url": "https://www.kaggle.com/datasets/runningwithrock/chicago-marathon-results"
+    },
+    {
+      "source": "fall_marathons",
+      "dataset": "runningwithrock/2010-2019-fall-marathons",
+      "version": 1,
+      "license": "MIT",
+      "url": "https://www.kaggle.com/datasets/runningwithrock/2010-2019-fall-marathons"
+    },
+    {
+      "source": "boston_2015_2017",
+      "dataset": "rojour/boston-results",
+      "version": 4,
+      "license": "Unknown",
+      "url": "https://www.kaggle.com/datasets/rojour/boston-results"
+    },
+    {
+      "source": "boston_2024",
+      "dataset": "runningwithrock/2024-boston-marathon-weather-and-splits",
+      "version": 2,
+      "license": "Attribution 4.0 International (CC BY 4.0)",
+      "url": "https://www.kaggle.com/datasets/runningwithrock/2024-boston-marathon-weather-and-splits"
+    },
+    {
+      "source": "training_pilot",
+      "dataset": "girardi69/marathon-time-predictions",
+      "version": 2,
+      "license": "CC0: Public Domain",
+      "url": "https://www.kaggle.com/datasets/girardi69/marathon-time-predictions"
+    }
+  ],
+  "audit": [
+    {
+      "source": "Chicago",
+      "raw_rows": 886546,
+      "eligible_rows": 877341,
+      "analysis_rows": 852085,
+      "inference_unit_count": 26,
+      "note": "Ages 20\u201369; main weather fit excludes interrupted 2007."
+    },
+    {
+      "source": "Fall marathons",
+      "raw_rows": 2053366,
+      "eligible_rows": 1990309,
+      "analysis_rows": 1624823,
+      "inference_unit_count": 199,
+      "note": "21 races, >=8 eligible years; overlaps Chicago."
+    },
+    {
+      "source": "Boston 2015\u20132017",
+      "raw_rows": 79638,
+      "eligible_rows": 79576,
+      "analysis_rows": 79576,
+      "inference_unit_count": 3,
+      "note": "Three event years; repeated participants possible."
+    },
+    {
+      "source": "Boston 2024",
+      "raw_rows": 17220,
+      "eligible_rows": 17169,
+      "analysis_rows": 17169,
+      "inference_unit_count": 751,
+      "note": "29 unmatched ZIPs; 22 conflicting-bib rows excluded; one event."
+    }
+  ],
+  "chicago_results": [
+    {
+      "question": "Chicago: temperature, minutes per 5\u00b0C",
+      "estimate": 5.327502801253785,
+      "ci_low": 1.8426546992446031,
+      "ci_high": 8.812350903262967,
+      "p_value": 0.004351202149840333
+    },
+    {
+      "question": "Chicago: temperature adjusted for RH/wind, per 5\u00b0C",
+      "estimate": 5.537194665780918,
+      "ci_low": 1.171351696991707,
+      "ci_high": 9.90303763457013,
+      "p_value": 0.015392604248936544
+    },
+    {
+      "question": "Chicago: RH, minutes per 10 percentage points",
+      "estimate": -0.827443516733477,
+      "ci_low": -4.327378208390927,
+      "ci_high": 2.6724911749239726,
+      "p_value": 0.6280624501722699
+    },
+    {
+      "question": "Chicago: wind, minutes per 5 source units",
+      "estimate": -0.2995105258398145,
+      "ci_low": -4.2508060624902155,
+      "ci_high": 3.6517850108105865,
+      "p_value": 0.8762495578238811
+    }
+  ],
+  "chicago_sensitivity": [
+    {
+      "question": "Main: 9 a.m., exclude 2007",
+      "estimate": 5.327502801253785,
+      "ci_low": 1.8426546992446031,
+      "ci_high": 8.812350903262967,
+      "p_value": 0.004351202149840333
+    },
+    {
+      "question": "Include interrupted 2007",
+      "estimate": 6.337447074085682,
+      "ci_low": 2.8918981108998083,
+      "ci_high": 9.782996037271554,
+      "p_value": 0.0008804937606910098
+    },
+    {
+      "question": "Quadratic year trend",
+      "estimate": 4.704036644692355,
+      "ci_low": 3.0339089113191733,
+      "ci_high": 6.3741643780655375,
+      "p_value": 7.066386686415738e-06
+    },
+    {
+      "question": "Add RH and wind",
+      "estimate": 5.537194665780918,
+      "ci_low": 1.171351696991707,
+      "ci_high": 9.90303763457013,
+      "p_value": 0.015392604248936544
+    },
+    {
+      "question": "Exclude pandemic-return 2021",
+      "estimate": 5.699889444700976,
+      "ci_low": 1.9038249582490319,
+      "ci_high": 9.49595393115292,
+      "p_value": 0.005057087480759961
+    },
+    {
+      "question": "9 a.m./noon mean temperature",
+      "estimate": 4.943627114915605,
+      "ci_low": 1.842033778367877,
+      "ci_high": 8.045220451463333,
+      "p_value": 0.0031511403154915363
+    }
+  ],
+  "chicago_loo_min": 4.525571687078903,
+  "chicago_loo_max": 6.304926977980788,
+  "race_count": 21,
+  "race_event_count": 199,
+  "race_raw_spread": 38.22041850591296,
+  "race_adjusted_spread": 36.67571086895373,
+  "race_comparison": [
+    {
+      "race": "Steamtown Marathon",
+      "n_years": 10,
+      "n_finishes": 17455,
+      "raw_mean": 252.59568538575496,
+      "adjusted_mean": 251.90534014410537,
+      "annual_min": 242.42747811082984,
+      "annual_max": 265.90857479016364
+    },
+    {
+      "race": "Indianapolis Monumental Marathon",
+      "n_years": 9,
+      "n_finishes": 34693,
+      "raw_mean": 256.413270512063,
+      "adjusted_mean": 256.09398690266073,
+      "annual_min": 253.85282498860133,
+      "annual_max": 258.6647154146013
+    },
+    {
+      "race": "Wineglass Marathon",
+      "n_years": 10,
+      "n_finishes": 17005,
+      "raw_mean": 261.29142753298004,
+      "adjusted_mean": 256.60822616862913,
+      "annual_min": 245.65607209026604,
+      "annual_max": 265.9586273940851
+    },
+    {
+      "race": "Lakefront Marathon",
+      "n_years": 10,
+      "n_finishes": 20104,
+      "raw_mean": 257.6582529157311,
+      "adjusted_mean": 256.7411443183431,
+      "annual_min": 253.3413565375596,
+      "annual_max": 259.58307529374434
+    },
+    {
+      "race": "Hartford Marathon",
+      "n_years": 10,
+      "n_finishes": 20012,
+      "raw_mean": 258.2211157151716,
+      "adjusted_mean": 258.1976454986733,
+      "annual_min": 252.49042260493098,
+      "annual_max": 266.23466599379265
+    },
+    {
+      "race": "Grand Rapids Marathon",
+      "n_years": 8,
+      "n_finishes": 10049,
+      "raw_mean": 260.6064410328732,
+      "adjusted_mean": 259.8955379113725,
+      "annual_min": 254.4264925637002,
+      "annual_max": 267.8431753004119
+    },
+    {
+      "race": "Twin Cities Marathon",
+      "n_years": 10,
+      "n_finishes": 80484,
+      "raw_mean": 259.6211864370456,
+      "adjusted_mean": 260.3784331448254,
+      "annual_min": 256.80974402565244,
+      "annual_max": 264.5970675317616
+    },
+    {
+      "race": "Philadelphia Marathon",
+      "n_years": 10,
+      "n_finishes": 95607,
+      "raw_mean": 258.99907056719195,
+      "adjusted_mean": 260.48565357740324,
+      "annual_min": 255.4941684250553,
+      "annual_max": 263.5401080063746
+    },
+    {
+      "race": "St. George Marathon",
+      "n_years": 10,
+      "n_finishes": 50807,
+      "raw_mean": 265.75359859272146,
+      "adjusted_mean": 264.4331156036454,
+      "annual_min": 254.72457287509275,
+      "annual_max": 271.26777936461815
+    },
+    {
+      "race": "Columbus Marathon",
+      "n_years": 10,
+      "n_finishes": 42835,
+      "raw_mean": 263.7874927002143,
+      "adjusted_mean": 265.1506548038477,
+      "annual_min": 257.00698069168453,
+      "annual_max": 273.92548754635374
+    },
+    {
+      "race": "Seattle Marathon",
+      "n_years": 8,
+      "n_finishes": 14019,
+      "raw_mean": 264.45882514487073,
+      "adjusted_mean": 266.6118432549214,
+      "annual_min": 262.2867740033479,
+      "annual_max": 272.6455639774988
+    },
+    {
+      "race": "Des Moines Marathon",
+      "n_years": 10,
+      "n_finishes": 14037,
+      "raw_mean": 265.46726054651003,
+      "adjusted_mean": 266.69703527561944,
+      "annual_min": 261.86903346682584,
+      "annual_max": 280.9670226551205
+    },
+    {
+      "race": "Richmond Marathon",
+      "n_years": 10,
+      "n_finishes": 42584,
+      "raw_mean": 270.60512495781444,
+      "adjusted_mean": 269.2888912526926,
+      "annual_min": 265.5605595631447,
+      "annual_max": 273.28593004708875
+    },
+    {
+      "race": "Mount Desert Island marathon",
+      "n_years": 9,
+      "n_finishes": 6559,
+      "raw_mean": 276.7510076950916,
+      "adjusted_mean": 272.4767512868349,
+      "annual_min": 265.8941943954999,
+      "annual_max": 281.70881719230965
+    },
+    {
+      "race": "NYC Marathon",
+      "n_years": 9,
+      "n_finishes": 446535,
+      "raw_mean": 273.7254824090094,
+      "adjusted_mean": 273.38179490727543,
+      "annual_min": 269.19511941645754,
+      "annual_max": 277.9162425376889
+    },
+    {
+      "race": "Chicago Marathon",
+      "n_years": 10,
+      "n_finishes": 397494,
+      "raw_mean": 275.9888807454904,
+      "adjusted_mean": 276.1722843464616,
+      "annual_min": 268.1680595547272,
+      "annual_max": 285.5917240314008
+    },
+    {
+      "race": "Baltimore Marathon",
+      "n_years": 8,
+      "n_finishes": 19348,
+      "raw_mean": 277.2897485127555,
+      "adjusted_mean": 278.4602455276672,
+      "annual_min": 273.81980940939104,
+      "annual_max": 283.6749625365081
+    },
+    {
+      "race": "Portland Marathon",
+      "n_years": 8,
+      "n_finishes": 47974,
+      "raw_mean": 296.7765898941037,
+      "adjusted_mean": 292.8139296922345,
+      "annual_min": 287.6479572387857,
+      "annual_max": 298.65969239969263
+    },
+    {
+      "race": "Route 66 Marathon",
+      "n_years": 10,
+      "n_finishes": 16477,
+      "raw_mean": 295.63008879371966,
+      "adjusted_mean": 293.28393703758286,
+      "annual_min": 282.74616799582355,
+      "annual_max": 299.8554512754501
+    },
+    {
+      "race": "Air Force Marathon",
+      "n_years": 10,
+      "n_finishes": 21913,
+      "raw_mean": 295.87867142164407,
+      "adjusted_mean": 298.1454503750701,
+      "annual_min": 285.537844563089,
+      "annual_max": 316.5511594263089
+    },
+    {
+      "race": "Marine Corps Marathon",
+      "n_years": 10,
+      "n_finishes": 208832,
+      "raw_mean": 301.45183671576353,
+      "adjusted_mean": 301.0217256080565,
+      "annual_min": 286.54343231507335,
+      "annual_max": 313.44453172679965
+    }
+  ],
+  "pacing_summary": [
+    {
+      "year": 2015,
+      "sex": "F",
+      "n": 11997,
+      "mean_slow_pct": 8.773985458006798,
+      "median_slow_pct": 7.219637413765434,
+      "negative_split_pct": 7.560223389180629,
+      "large_slowdown_pct": 8.143702592314746
+    },
+    {
+      "year": 2015,
+      "sex": "M",
+      "n": 14573,
+      "mean_slow_pct": 9.94812179043722,
+      "median_slow_pct": 7.28958371205235,
+      "negative_split_pct": 7.712893707541343,
+      "large_slowdown_pct": 12.72901941947437
+    },
+    {
+      "year": 2016,
+      "sex": "F",
+      "n": 12160,
+      "mean_slow_pct": 12.000266436297089,
+      "median_slow_pct": 10.341245708022939,
+      "negative_split_pct": 3.0509868421052633,
+      "large_slowdown_pct": 14.506578947368421
+    },
+    {
+      "year": 2016,
+      "sex": "M",
+      "n": 14453,
+      "mean_slow_pct": 16.750340765019203,
+      "median_slow_pct": 14.136820162971397,
+      "negative_split_pct": 2.13796443644918,
+      "large_slowdown_pct": 31.585138033626237
+    },
+    {
+      "year": 2017,
+      "sex": "F",
+      "n": 11965,
+      "mean_slow_pct": 12.986086488691798,
+      "median_slow_pct": 11.268556005398134,
+      "negative_split_pct": 3.150856665273715,
+      "large_slowdown_pct": 17.801922273297116
+    },
+    {
+      "year": 2017,
+      "sex": "M",
+      "n": 14428,
+      "mean_slow_pct": 17.271181000222423,
+      "median_slow_pct": 14.522906327193606,
+      "negative_split_pct": 3.0080399223731633,
+      "large_slowdown_pct": 33.73995009703354
+    }
+  ],
+  "pacing_adjusted": [
+    {
+      "question": "2015: male minus female slowdown, percentage points",
+      "estimate": 2.2487716819135253,
+      "ci_low": 1.9557874228209198,
+      "ci_high": 2.5417559410061306,
+      "p_value": 6.113304827164226e-51,
+      "year": 2015
+    },
+    {
+      "question": "2016: male minus female slowdown, percentage points",
+      "estimate": 6.449598981144307,
+      "ci_low": 6.124366739312415,
+      "ci_high": 6.774831222976199,
+      "p_value": 0.0,
+      "year": 2016
+    },
+    {
+      "question": "2017: male minus female slowdown, percentage points",
+      "estimate": 6.389970511836228,
+      "ci_low": 6.032786301845693,
+      "ci_high": 6.747154721826764,
+      "p_value": 2.5487410432553168e-263,
+      "year": 2017
+    }
+  ],
+  "checkpoint_metrics": [
+    {
+      "sample": "All eligible 2017",
+      "model": "Training remaining-time mean",
+      "n": 26356,
+      "mae": 27.134553884571382,
+      "rmse": 35.72731802587546,
+      "r2": -0.03844359258391661
+    },
+    {
+      "sample": "All eligible 2017",
+      "model": "Constant 10-km pace",
+      "n": 26356,
+      "mae": 22.26637157446755,
+      "rmse": 28.68685460698185,
+      "r2": 0.3305040658984457
+    },
+    {
+      "sample": "All eligible 2017",
+      "model": "Demographics",
+      "n": 26356,
+      "mae": 24.311732292064363,
+      "rmse": 33.10153402260687,
+      "r2": 0.1085883190589958
+    },
+    {
+      "sample": "All eligible 2017",
+      "model": "Demographics + first 10 km",
+      "n": 26356,
+      "mae": 13.00044384589926,
+      "rmse": 18.60938061714978,
+      "r2": 0.7182616826843973
+    },
+    {
+      "sample": "No training identity-proxy match",
+      "model": "Training remaining-time mean",
+      "n": 19891,
+      "mae": 27.26865051443863,
+      "rmse": 35.988194213184414,
+      "r2": -0.05485554782189528
+    },
+    {
+      "sample": "No training identity-proxy match",
+      "model": "Constant 10-km pace",
+      "n": 19891,
+      "mae": 22.96071916863573,
+      "rmse": 29.35838718046065,
+      "r2": 0.29799974861522993
+    },
+    {
+      "sample": "No training identity-proxy match",
+      "model": "Demographics",
+      "n": 19891,
+      "mae": 24.457974084570726,
+      "rmse": 33.614362395136936,
+      "r2": 0.07971437990407715
+    },
+    {
+      "sample": "No training identity-proxy match",
+      "model": "Demographics + first 10 km",
+      "n": 19891,
+      "mae": 13.343735755619779,
+      "rmse": 19.092066668784355,
+      "r2": 0.7031214878957355
+    }
+  ],
+  "history_metrics": [
+    {
+      "sample": "All strict matches",
+      "model": "Repeat previous finish",
+      "n": 4922,
+      "mae": 15.142553839902478,
+      "r2": 0.7087410573369285
+    },
+    {
+      "sample": "All strict matches",
+      "model": "Demographics",
+      "n": 4922,
+      "mae": 27.8407959340531,
+      "r2": 0.19513915024899375
+    },
+    {
+      "sample": "All strict matches",
+      "model": "Demographics + previous finish",
+      "n": 4922,
+      "mae": 15.759379701025411,
+      "r2": 0.7340757946046537
+    },
+    {
+      "sample": "Also same city/state",
+      "model": "Repeat previous finish",
+      "n": 4400,
+      "mae": 15.15692424242424,
+      "r2": 0.7032430237114089
+    },
+    {
+      "sample": "Also same city/state",
+      "model": "Demographics",
+      "n": 4400,
+      "mae": 27.67236268196738,
+      "r2": 0.19649795942733683
+    },
+    {
+      "sample": "Also same city/state",
+      "model": "Demographics + previous finish",
+      "n": 4400,
+      "mae": 15.708628296431435,
+      "r2": 0.7311579319279368
+    }
+  ],
+  "history_train_n": 5516,
+  "history_test_n": 4922,
+  "history_mae_gain": 12.698242094150622,
+  "history_gain_ci": [
+    11.997984878531394,
+    13.420137851055257
+  ],
+  "home_result": {
+    "question": "Home temperature: slowdown points per 5\u00b0C",
+    "estimate": 0.1628916349614571,
+    "ci_low": -0.14426884434802245,
+    "ci_high": 0.4700521142709366,
+    "p_value": 0.2981751756565141
+  },
+  "home_sensitivity": [
+    {
+      "question": "Unadjusted",
+      "estimate": -0.17807615136573723,
+      "ci_low": -0.5356097489591503,
+      "ci_high": 0.1794574462276758,
+      "p_value": 0.32850146940416397
+    },
+    {
+      "question": "Age and sex only",
+      "estimate": -0.2625311538380891,
+      "ci_low": -0.6385287582255043,
+      "ci_high": 0.11346645054932603,
+      "p_value": 0.17087573733943676
+    },
+    {
+      "question": "Age, sex, first-half time",
+      "estimate": 0.1628916349614571,
+      "ci_low": -0.14426884434802245,
+      "ci_high": 0.4700521142709366,
+      "p_value": 0.2981751756565141
+    },
+    {
+      "question": "Cluster by individual ZIP",
+      "estimate": 0.1628916349614571,
+      "ci_low": -0.0858810526313373,
+      "ci_high": 0.41166432255425145,
+      "p_value": 0.19932850295834348
+    },
+    {
+      "question": "Mean daily minimum temperature",
+      "estimate": 0.1760325082648925,
+      "ci_low": -0.1381226404636333,
+      "ci_high": 0.49018765699341826,
+      "p_value": 0.27167897502914784
+    },
+    {
+      "question": "Include conflicting bib records",
+      "estimate": 0.16286384245277932,
+      "ci_low": -0.14402162799869841,
+      "ci_high": 0.46974931290425703,
+      "p_value": 0.29782510004427937
+    }
+  ],
+  "home_n": 17169,
+  "home_zip_count": 5878,
+  "home_cluster_count": 751,
+  "home_unmatched": 29,
+  "home_ambiguous_rows": 22,
+  "home_normalized_matches": 17191,
+  "home_raw_zip_matches": 11857,
+  "focal_tests": [
+    {
+      "question": "Chicago: temperature, minutes per 5\u00b0C",
+      "estimate": 5.327502801253785,
+      "ci_low": 1.8426546992446031,
+      "ci_high": 8.812350903262967,
+      "p_value": 0.004351202149840333,
+      "q_bh": 0.017404808599361332
+    },
+    {
+      "question": "Chicago: RH, minutes per 10 percentage points",
+      "estimate": -0.827443516733477,
+      "ci_low": -4.327378208390927,
+      "ci_high": 2.6724911749239726,
+      "p_value": 0.6280624501722699,
+      "q_bh": 0.8374166002296932
+    },
+    {
+      "question": "Chicago: wind, minutes per 5 source units",
+      "estimate": -0.2995105258398145,
+      "ci_low": -4.2508060624902155,
+      "ci_high": 3.6517850108105865,
+      "p_value": 0.8762495578238811,
+      "q_bh": 0.8762495578238811
+    },
+    {
+      "question": "Home temperature: slowdown points per 5\u00b0C",
+      "estimate": 0.1628916349614571,
+      "ci_low": -0.14426884434802245,
+      "ci_high": 0.4700521142709366,
+      "p_value": 0.2981751756565141,
+      "q_bh": 0.5963503513130282
+    }
+  ],
+  "pilot_audit": [
+    {
+      "check": "Rows",
+      "value": 87.0
+    },
+    {
+      "check": "Missing cross-training entries",
+      "value": 74.0
+    },
+    {
+      "check": "Missing demographic category",
+      "value": 6.0
+    },
+    {
+      "check": "Speed entries above 40 (declared speed context)",
+      "value": 1.0
+    },
+    {
+      "check": "Maximum recorded speed field",
+      "value": 11125.0
+    }
+  ]
+}

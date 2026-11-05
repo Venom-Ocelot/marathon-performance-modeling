@@ -1,0 +1,121 @@
+{
+  "source": {
+    "dataset": "mexwell/long-distance-running-dataset",
+    "version": 1,
+    "selected_file": "run_ww_2019_d.csv",
+    "url": "https://www.kaggle.com/datasets/mexwell/long-distance-running-dataset",
+    "license_as_listed": "CC BY 4.0",
+    "downloaded_utc": "2026-11-02T10:17:56.538852+00:00",
+    "files": {
+      "run_ww_2019_d.csv": "9fb098a4c16b6ee63ebc2823501ea8bdd8cc4fb77b7ec031730ea45cad8cfbce"
+    }
+  },
+  "raw_daily_rows": 13290380,
+  "athletes": 36412,
+  "window_rows": 320226,
+  "flagged_days": 201,
+  "cohort_rows": 5247,
+  "cohort_athletes": 5192,
+  "audit": [
+    {
+      "race": "BOSTON 2019",
+      "labeled_participants": 4365,
+      "valid_pre_race_windows": 4236,
+      "retained_outcome_proxies": 4170
+    },
+    {
+      "race": "CHICAGO 2019",
+      "labeled_participants": 1253,
+      "valid_pre_race_windows": 1199,
+      "retained_outcome_proxies": 1077
+    }
+  ],
+  "summary": [
+    {
+      "race": "BOSTON 2019",
+      "n": 4170,
+      "median_weekly_km": 56.564687500000005,
+      "median_days_per_week": 4.25,
+      "median_training_pace": 5.0116573505287665,
+      "median_race_day_minutes": 207.0
+    },
+    {
+      "race": "CHICAGO 2019",
+      "n": 1077,
+      "median_weekly_km": 37.682375,
+      "median_days_per_week": 3.125,
+      "median_training_pace": 5.881872356785852,
+      "median_race_day_minutes": 253.0
+    }
+  ],
+  "effects": [
+    {
+      "question": "Demographics and event adjustment",
+      "estimate": -8.277387003143026,
+      "ci_low": -8.674708219608794,
+      "ci_high": -7.8800657866772585,
+      "p_value": 0.0,
+      "n": 5247
+    },
+    {
+      "question": "Also adjust training pace",
+      "estimate": -4.822623519372913,
+      "ci_low": -5.129376033811683,
+      "ci_high": -4.515871004934143,
+      "p_value": 1.052924689519338e-191,
+      "n": 5247
+    },
+    {
+      "question": "At least six active weeks",
+      "estimate": -4.851951681684091,
+      "ci_low": -5.169916463125271,
+      "ci_high": -4.533986900242911,
+      "p_value": 1.1317855454876221e-180,
+      "n": 4924
+    },
+    {
+      "question": "Narrower 40\u201344 km race-day gate",
+      "estimate": -4.598513200755229,
+      "ci_low": -4.898276271169896,
+      "ci_high": -4.2987501303405615,
+      "p_value": 5.895906215545903e-182,
+      "n": 4761
+    }
+  ],
+  "metrics": [
+    {
+      "model": "Boston training-sample mean",
+      "n_train": 4170,
+      "n_test": 1022,
+      "mae": 60.33345193121433,
+      "rmse": 74.81217519003455,
+      "r2": -0.5436411290818717
+    },
+    {
+      "model": "Demographics",
+      "n_train": 4170,
+      "n_test": 1022,
+      "mae": 56.77173328485323,
+      "rmse": 72.6383921876861,
+      "r2": -0.45523865621279147
+    },
+    {
+      "model": "Demographics + volume/frequency",
+      "n_train": 4170,
+      "n_test": 1022,
+      "mae": 44.03675040745853,
+      "rmse": 58.798268259204576,
+      "r2": 0.04647771447972093
+    },
+    {
+      "model": "Demographics + volume/frequency/pace",
+      "n_train": 4170,
+      "n_test": 1022,
+      "mae": 21.82369064897507,
+      "rmse": 30.58526273337823,
+      "r2": 0.7419961372365622
+    }
+  ],
+  "overlapping_test_athletes_removed": 55,
+  "volume_frequency_correlation": 0.9058925140314785
+}

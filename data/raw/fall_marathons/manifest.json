@@ -1,0 +1,10 @@
+{
+  "dataset": "runningwithrock/2010-2019-fall-marathons",
+  "version": 1,
+  "url": "https://www.kaggle.com/datasets/runningwithrock/2010-2019-fall-marathons",
+  "license_as_listed": "MIT",
+  "downloaded_utc": "2026-11-02T09:57:39.264575+00:00",
+  "files": {
+    "Results.csv": "873179d6d4c5cbfd1b5656a4c39c97cdbb1c5ac93b40f0b86111a5889687c421"
+  }
+}

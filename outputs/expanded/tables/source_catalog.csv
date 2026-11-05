@@ -1,0 +1,6 @@
+source,dataset,version,license,url
+chicago,runningwithrock/chicago-marathon-results,3,MIT,https://www.kaggle.com/datasets/runningwithrock/chicago-marathon-results
+fall_marathons,runningwithrock/2010-2019-fall-marathons,1,MIT,https://www.kaggle.com/datasets/runningwithrock/2010-2019-fall-marathons
+boston_2015_2017,rojour/boston-results,4,Unknown,https://www.kaggle.com/datasets/rojour/boston-results
+boston_2024,runningwithrock/2024-boston-marathon-weather-and-splits,2,Attribution 4.0 International (CC BY 4.0),https://www.kaggle.com/datasets/runningwithrock/2024-boston-marathon-weather-and-splits
+training_pilot,girardi69/marathon-time-predictions,2,CC0: Public Domain,https://www.kaggle.com/datasets/girardi69/marathon-time-predictions

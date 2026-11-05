@@ -1,0 +1,11 @@
+{
+  "dataset": "mexwell/long-distance-running-dataset",
+  "version": 1,
+  "selected_file": "run_ww_2019_d.csv",
+  "url": "https://www.kaggle.com/datasets/mexwell/long-distance-running-dataset",
+  "license_as_listed": "CC BY 4.0",
+  "downloaded_utc": "2026-11-02T10:17:56.538852+00:00",
+  "files": {
+    "run_ww_2019_d.csv": "9fb098a4c16b6ee63ebc2823501ea8bdd8cc4fb77b7ec031730ea45cad8cfbce"
+  }
+}

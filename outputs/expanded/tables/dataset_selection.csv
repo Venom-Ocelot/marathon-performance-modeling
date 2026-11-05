@@ -1,0 +1,10 @@
+dataset,decision,reason
+runningwithrock/chicago-marathon-results,Analyze,Second long event series; adds dew point and wind
+runningwithrock/2010-2019-fall-marathons,Analyze,Cross-race field comparisons; audit overlap with Chicago
+rojour/boston-results,Analyze,Splits and conservative historical linkage
+runningwithrock/2024-boston-marathon-weather-and-splits,Analyze,Home-weather proxy; pre-race date and ZIP audit
+girardi69/marathon-time-predictions,Audit only,Tiny sample; mileage includes race; speed anomaly; missing training fields
+likithagedipudi/run-club-marathon-performance-dataset,Exclude,Publisher explicitly describes synthetic generation
+runningwithrock/nyc-marathon-results-all-years,Not selected,Adds historical coverage but no weather; overlaps fall sample
+runningwithrock/2024-marathon-results,Not selected,Adds recency; not the missing training or weather measurements
+mexwell/long-distance-running-dataset,Analyze,"Real training logs; supplementary race-day duration proxy, not official finish times"
