@@ -1,0 +1,413 @@
+{
+  "inputs": [
+    "outputs/results.json",
+    "outputs/expanded/results.json",
+    "outputs/tables/*.csv",
+    "outputs/expanded/tables/chicago_annual.csv"
+  ],
+  "gap_trends": [
+    {
+      "outcome": "sex_gap",
+      "question": "Female \u2212 male gap (min/year)",
+      "estimate": 0.2676957560077988,
+      "ci_low": 0.19856428950930174,
+      "ci_high": 0.33682722250629593,
+      "p_value": 1.9283064751558449e-07,
+      "n": 20,
+      "ols_ci_low": 0.20010354454326756,
+      "ols_ci_high": 0.3352879674723301,
+      "value_1999": 23.11755028677257,
+      "value_2018": 30.628777024730056,
+      "fitted_change_1999_2018": 5.086219364148178
+    },
+    {
+      "outcome": "sex_gap_pct",
+      "question": "Female \u2212 male gap (% of male mean per year)",
+      "estimate": 0.10214387722384824,
+      "ci_low": 0.07923496302239039,
+      "ci_high": 0.1250527914253061,
+      "p_value": 2.4179742457160767e-08,
+      "n": 20,
+      "ols_ci_low": 0.0704344156705906,
+      "ols_ci_high": 0.13385333877710587,
+      "value_1999": 9.881143675528605,
+      "value_2018": 12.339651043395369,
+      "fitted_change_1999_2018": 1.9407336672531166
+    },
+    {
+      "outcome": "age_gap",
+      "question": "Age 60\u201364 \u2212 30\u201334 gap (min/year)",
+      "estimate": 0.7593910380002489,
+      "ci_low": 0.5842375510963624,
+      "ci_high": 0.9345445249041353,
+      "p_value": 3.682043534288854e-08,
+      "n": 20,
+      "ols_ci_low": 0.5668496178288907,
+      "ols_ci_high": 0.9519324581716071,
+      "value_1999": 22.54397478778253,
+      "value_2018": 37.23522125473349,
+      "fitted_change_1999_2018": 14.42842972200473
+    },
+    {
+      "outcome": "age_gap_pct",
+      "question": "Age 60\u201364 \u2212 30\u201334 gap (% of 30\u201334 mean per year)",
+      "estimate": 0.31016054554528927,
+      "ci_low": 0.23379701905055095,
+      "ci_high": 0.3865240720400276,
+      "p_value": 9.66160679197917e-08,
+      "n": 20,
+      "ols_ci_low": 0.23101883986740449,
+      "ols_ci_high": 0.3893022512231741,
+      "value_1999": 9.606109091494098,
+      "value_2018": 15.079056522151612,
+      "fitted_change_1999_2018": 5.893050365360496
+    }
+  ],
+  "collinearity": {
+    "share_year_r": 0.971369792613162,
+    "share_gap_r": 0.930531182888441,
+    "vif": 17.717702639468108,
+    "joint_year": {
+      "question": "Year, adjusting for female share",
+      "estimate": -0.06930107617366121,
+      "ci_low": -0.2095910471077356,
+      "ci_high": 0.07098889476041317,
+      "p_value": 0.31190706042940547,
+      "n": 20
+    },
+    "joint_share": {
+      "question": "Female share (per pp), adjusting for year",
+      "estimate": 0.48871098698792714,
+      "ci_low": 0.2879095697696959,
+      "ci_high": 0.6895124042061584,
+      "p_value": 8.271634227790345e-05,
+      "n": 20
+    }
+  },
+  "factor_comparison": [
+    {
+      "factor": "Race field: P90 \u2212 P10 of 21 adjusted race means",
+      "category": "Race field",
+      "minutes": 36.67571086895373,
+      "ci_low": 16.773568738646304,
+      "ci_high": 44.92773870539577,
+      "note": "Fall marathons; bootstrap over races; selection and course are not separated"
+    },
+    {
+      "factor": "Age: 60\u201364 vs 30\u201334 (Berlin)",
+      "category": "Demographics",
+      "minutes": 30.100532805664,
+      "ci_low": 27.73833483287186,
+      "ci_high": 32.46273077845614,
+      "note": "Sex-standardized annual contrast"
+    },
+    {
+      "factor": "Sex: female vs male (Berlin)",
+      "category": "Demographics",
+      "minutes": 27.101107242556047,
+      "ci_low": 26.269115661267957,
+      "ci_high": 27.933098823844137,
+      "note": "Age-standardized annual contrast"
+    },
+    {
+      "factor": "Temperature: coolest \u2192 warmest Berlin year (+10.5\u00b0C)",
+      "category": "Race-day weather",
+      "minutes": 13.554138313148043,
+      "ci_low": 8.745077053409746,
+      "ci_high": 18.36319957288634,
+      "note": "Observed range of daily mean temperature"
+    },
+    {
+      "factor": "Temperature: +5\u00b0C (Berlin, daily mean)",
+      "category": "Race-day weather",
+      "minutes": 6.454351577689545,
+      "ci_low": 4.164322406385594,
+      "ci_high": 8.744380748993496,
+      "note": "Standardized annual mean, linear year trend"
+    },
+    {
+      "factor": "Temperature: +5\u00b0C (Chicago, 9 a.m.)",
+      "category": "Race-day weather",
+      "minutes": 5.327502801253785,
+      "ci_low": 1.8426546992446031,
+      "ci_high": 8.812350903262967,
+      "note": "Standardized annual mean, 26 race years"
+    },
+    {
+      "factor": "Humidity: +10 points RH (Chicago)",
+      "category": "Race-day weather",
+      "minutes": -0.827443516733477,
+      "ci_low": -4.327378208390927,
+      "ci_high": 2.6724911749239726,
+      "note": "Adjusted for temperature and wind; inconclusive"
+    }
+  ],
+  "r2_drop": [
+    {
+      "removed": "Sex",
+      "r2_full": 0.1149281993843787,
+      "r2_without": 0.04027578657593933,
+      "mae_without": 36.43508107980826,
+      "r2_drop": 0.07465241280843937,
+      "mae_full": 34.863327090361004
+    },
+    {
+      "removed": "Age class",
+      "r2_full": 0.1149281993843787,
+      "r2_without": 0.0692821320075443,
+      "mae_without": 35.80890118967665,
+      "r2_drop": 0.04564606737683441,
+      "mae_full": 34.863327090361004
+    },
+    {
+      "removed": "Temperature",
+      "r2_full": 0.1149281993843787,
+      "r2_without": 0.11402977140668447,
+      "mae_without": 34.4614604240895,
+      "r2_drop": 0.0008984279776942383,
+      "mae_full": 34.863327090361004
+    }
+  ],
+  "literature_comparison": [
+    {
+      "source": "Berlin (this project)",
+      "measure": "Slowing per 5\u00b0C air temperature",
+      "group": "All finishers, annual mean",
+      "value_pct": 2.6073951882425352,
+      "ci_low_pct": 1.6822811825486594,
+      "ci_high_pct": 3.5325091939364115
+    },
+    {
+      "source": "Chicago (this project)",
+      "measure": "Slowing per 5\u00b0C air temperature",
+      "group": "All finishers, annual mean",
+      "value_pct": 1.9792466234893764,
+      "ci_low_pct": 0.6845736600792411,
+      "ci_high_pct": 3.273919586899512
+    },
+    {
+      "source": "Ely et al. 2007",
+      "measure": "Slowing per 5\u00b0C WBGT",
+      "group": "25th place",
+      "value_pct": 1.1,
+      "ci_low_pct": NaN,
+      "ci_high_pct": NaN
+    },
+    {
+      "source": "Ely et al. 2007",
+      "measure": "Slowing per 5\u00b0C WBGT",
+      "group": "50th place",
+      "value_pct": 1.5,
+      "ci_low_pct": NaN,
+      "ci_high_pct": NaN
+    },
+    {
+      "source": "Ely et al. 2007",
+      "measure": "Slowing per 5\u00b0C WBGT",
+      "group": "100th place",
+      "value_pct": 1.8,
+      "ci_low_pct": NaN,
+      "ci_high_pct": NaN
+    },
+    {
+      "source": "Ely et al. 2007",
+      "measure": "Slowing per 5\u00b0C WBGT",
+      "group": "300th place",
+      "value_pct": 3.2,
+      "ci_low_pct": NaN,
+      "ci_high_pct": NaN
+    },
+    {
+      "source": "Deaner et al. 2015",
+      "measure": "Mean second-half slowdown",
+      "group": "M",
+      "value_pct": 15.6,
+      "ci_low_pct": NaN,
+      "ci_high_pct": NaN
+    },
+    {
+      "source": "Deaner et al. 2015",
+      "measure": "Mean second-half slowdown",
+      "group": "F",
+      "value_pct": 11.7,
+      "ci_low_pct": NaN,
+      "ci_high_pct": NaN
+    },
+    {
+      "source": "Boston 2015 (this project)",
+      "measure": "Mean second-half slowdown",
+      "group": "F",
+      "value_pct": 8.773985458006798,
+      "ci_low_pct": NaN,
+      "ci_high_pct": NaN
+    },
+    {
+      "source": "Boston 2015 (this project)",
+      "measure": "Mean second-half slowdown",
+      "group": "M",
+      "value_pct": 9.94812179043722,
+      "ci_low_pct": NaN,
+      "ci_high_pct": NaN
+    },
+    {
+      "source": "Boston 2016 (this project)",
+      "measure": "Mean second-half slowdown",
+      "group": "F",
+      "value_pct": 12.000266436297089,
+      "ci_low_pct": NaN,
+      "ci_high_pct": NaN
+    },
+    {
+      "source": "Boston 2016 (this project)",
+      "measure": "Mean second-half slowdown",
+      "group": "M",
+      "value_pct": 16.750340765019203,
+      "ci_low_pct": NaN,
+      "ci_high_pct": NaN
+    },
+    {
+      "source": "Boston 2017 (this project)",
+      "measure": "Mean second-half slowdown",
+      "group": "F",
+      "value_pct": 12.986086488691798,
+      "ci_low_pct": NaN,
+      "ci_high_pct": NaN
+    },
+    {
+      "source": "Boston 2017 (this project)",
+      "measure": "Mean second-half slowdown",
+      "group": "M",
+      "value_pct": 17.271181000222423,
+      "ci_low_pct": NaN,
+      "ci_high_pct": NaN
+    }
+  ],
+  "boston_weather_pacing": [
+    {
+      "year": 2015,
+      "sex": "F",
+      "n": 11997,
+      "mean_slow_pct": 8.773985458006798,
+      "median_slow_pct": 7.219637413765434,
+      "negative_split_pct": 7.560223389180629,
+      "large_slowdown_pct": 8.143702592314746,
+      "start_temp_f": 41,
+      "start_rh_pct": 93,
+      "wind": "E 12 mph (headwind)",
+      "conditions": "rain",
+      "start_temp_c": 5.0,
+      "implied_exponent": 1.0511607282030961,
+      "riegel_underestimate_pct": -0.6108185046918568,
+      "riegel_underestimate_min_4h": -1.4749738243187416
+    },
+    {
+      "year": 2015,
+      "sex": "M",
+      "n": 14573,
+      "mean_slow_pct": 9.94812179043722,
+      "median_slow_pct": 7.28958371205235,
+      "negative_split_pct": 7.712893707541343,
+      "large_slowdown_pct": 12.72901941947437,
+      "start_temp_f": 41,
+      "start_rh_pct": 93,
+      "wind": "E 12 mph (headwind)",
+      "conditions": "rain",
+      "start_temp_c": 5.0,
+      "implied_exponent": 1.051647622937794,
+      "riegel_underestimate_pct": -0.5772700175787238,
+      "riegel_underestimate_min_4h": -1.3934922551753282
+    },
+    {
+      "year": 2016,
+      "sex": "F",
+      "n": 12160,
+      "mean_slow_pct": 12.000266436297089,
+      "median_slow_pct": 10.341245708022939,
+      "negative_split_pct": 3.0509868421052633,
+      "large_slowdown_pct": 14.506578947368421,
+      "start_temp_f": 67,
+      "start_rh_pct": 28,
+      "wind": "ENE 8 mph (headwind)",
+      "conditions": "sunny, warm",
+      "start_temp_c": 19.444444444444443,
+      "implied_exponent": 1.0727317751476322,
+      "riegel_underestimate_pct": 0.8864049109428285,
+      "riegel_underestimate_min_4h": 2.108680340171434
+    },
+    {
+      "year": 2016,
+      "sex": "M",
+      "n": 14453,
+      "mean_slow_pct": 16.750340765019203,
+      "median_slow_pct": 14.136820162971397,
+      "negative_split_pct": 2.13796443644918,
+      "large_slowdown_pct": 31.585138033626237,
+      "start_temp_f": 67,
+      "start_rh_pct": 28,
+      "wind": "ENE 8 mph (headwind)",
+      "conditions": "sunny, warm",
+      "start_temp_c": 19.444444444444443,
+      "implied_exponent": 1.0985328839967952,
+      "riegel_underestimate_pct": 2.706884104372631,
+      "riegel_underestimate_min_4h": 6.32530322299762
+    },
+    {
+      "year": 2017,
+      "sex": "F",
+      "n": 11965,
+      "mean_slow_pct": 12.986086488691798,
+      "median_slow_pct": 11.268556005398134,
+      "negative_split_pct": 3.150856665273715,
+      "large_slowdown_pct": 17.801922273297116,
+      "start_temp_f": 72,
+      "start_rh_pct": 37,
+      "wind": "WNW 17 mph (tailwind)",
+      "conditions": "sunny, warm",
+      "start_temp_c": 22.22222222222222,
+      "implied_exponent": 1.0790780608328363,
+      "riegel_underestimate_pct": 1.3311726588192574,
+      "riegel_underestimate_min_4h": 3.1528445761929014
+    },
+    {
+      "year": 2017,
+      "sex": "M",
+      "n": 14428,
+      "mean_slow_pct": 17.271181000222423,
+      "median_slow_pct": 14.522906327193606,
+      "negative_split_pct": 3.0080399223731633,
+      "large_slowdown_pct": 33.73995009703354,
+      "start_temp_f": 72,
+      "start_rh_pct": 37,
+      "wind": "WNW 17 mph (tailwind)",
+      "conditions": "sunny, warm",
+      "start_temp_c": 22.22222222222222,
+      "implied_exponent": 1.101131704042986,
+      "riegel_underestimate_pct": 2.892063406525791,
+      "riegel_underestimate_min_4h": 6.745857693841986
+    }
+  ],
+  "chicago_quadratic": [
+    {
+      "question": "Temperature\u00b2 (main, exclude 2007)",
+      "estimate": 0.07014397689644625,
+      "ci_low": -0.11813721648286243,
+      "ci_high": 0.25842517027575496,
+      "p_value": 0.4479692284151619,
+      "n": 26,
+      "optimum_c": 3.552005926134224,
+      "aic_linear": 170.89388055037372,
+      "aic_quadratic": 168.42228362177582
+    },
+    {
+      "question": "Temperature\u00b2 (include interrupted 2007)",
+      "estimate": 0.07642817721533496,
+      "ci_low": -0.003233360177037875,
+      "ci_high": 0.1560897146077078,
+      "p_value": 0.05923259683424445,
+      "n": 27,
+      "optimum_c": 3.9837540457154956,
+      "aic_linear": NaN,
+      "aic_quadratic": 173.6982263782338
+    }
+  ]
+}

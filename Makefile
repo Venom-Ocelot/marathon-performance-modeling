@@ -1,7 +1,7 @@
 PYTHON ?= .venv/bin/python
 JUPYTER ?= .venv/bin/jupyter
 
-.PHONY: help install download notebook execute reports check validate rebuild-notebook
+.PHONY: help install download notebook execute reports supplementary check validate rebuild-notebook
 
 help:
 	@echo "install           Install direct dependencies into .venv"
@@ -9,6 +9,7 @@ help:
 	@echo "notebook          Open the executed notebook in JupyterLab"
 	@echo "execute           Re-run all analysis and regenerate reports"
 	@echo "reports           Regenerate reports from committed results"
+	@echo "supplementary     Gap trends, factor comparison, literature and weather figures (no raw data)"
 	@echo "check             Check committed artifacts without raw data"
 	@echo "validate          Independently verify results using raw data"
 	@echo "rebuild-notebook  Overwrite notebook source from generator scripts"
@@ -31,6 +32,9 @@ execute:
 reports:
 	$(PYTHON) scripts/render_berlin_report.py
 	$(PYTHON) scripts/render_report.py
+
+supplementary:
+	$(PYTHON) scripts/supplementary_analysis.py
 
 check:
 	$(PYTHON) scripts/check_artifacts.py

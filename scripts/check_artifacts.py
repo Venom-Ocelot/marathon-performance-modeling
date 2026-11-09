@@ -49,9 +49,11 @@ def main():
         for src in report.images:
             assert src.startswith('data:image/png;base64,')
             Image.open(io.BytesIO(base64.b64decode(src.split(',', 1)[1]))).verify()
-    figures = list((ROOT / 'outputs').rglob('*.png'))
+    all_figures = list((ROOT / 'outputs').rglob('*.png'))
+    figures = [path for path in all_figures if 'supplementary' not in path.parts]
     assert len(figures) == 17
-    for figure in figures:
+    assert len(all_figures) - len(figures) in {0, 4}
+    for figure in all_figures:
         Image.open(figure).verify()
     for path in (ROOT / 'outputs').rglob('*.json'):
         json.loads(path.read_text())

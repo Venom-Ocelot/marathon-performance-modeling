@@ -1,0 +1,15 @@
+source,measure,group,value_pct,ci_low_pct,ci_high_pct
+Berlin (this project),Slowing per 5°C air temperature,"All finishers, annual mean",2.6073951882425352,1.6822811825486594,3.5325091939364115
+Chicago (this project),Slowing per 5°C air temperature,"All finishers, annual mean",1.9792466234893764,0.6845736600792411,3.273919586899512
+Ely et al. 2007,Slowing per 5°C WBGT,25th place,1.1,,
+Ely et al. 2007,Slowing per 5°C WBGT,50th place,1.5,,
+Ely et al. 2007,Slowing per 5°C WBGT,100th place,1.8,,
+Ely et al. 2007,Slowing per 5°C WBGT,300th place,3.2,,
+Deaner et al. 2015,Mean second-half slowdown,M,15.6,,
+Deaner et al. 2015,Mean second-half slowdown,F,11.7,,
+Boston 2015 (this project),Mean second-half slowdown,F,8.773985458006798,,
+Boston 2015 (this project),Mean second-half slowdown,M,9.94812179043722,,
+Boston 2016 (this project),Mean second-half slowdown,F,12.000266436297089,,
+Boston 2016 (this project),Mean second-half slowdown,M,16.750340765019203,,
+Boston 2017 (this project),Mean second-half slowdown,F,12.986086488691798,,
+Boston 2017 (this project),Mean second-half slowdown,M,17.271181000222423,,

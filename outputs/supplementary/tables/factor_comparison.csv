@@ -1,0 +1,8 @@
+factor,category,minutes,ci_low,ci_high,note
+Race field: P90 − P10 of 21 adjusted race means,Race field,36.67571086895373,16.773568738646304,44.92773870539577,Fall marathons; bootstrap over races; selection and course are not separated
+Age: 60–64 vs 30–34 (Berlin),Demographics,30.100532805664,27.73833483287186,32.46273077845614,Sex-standardized annual contrast
+Sex: female vs male (Berlin),Demographics,27.101107242556047,26.269115661267957,27.933098823844137,Age-standardized annual contrast
+Temperature: coolest → warmest Berlin year (+10.5°C),Race-day weather,13.554138313148043,8.745077053409746,18.36319957288634,Observed range of daily mean temperature
+"Temperature: +5°C (Berlin, daily mean)",Race-day weather,6.454351577689545,4.164322406385594,8.744380748993496,"Standardized annual mean, linear year trend"
+"Temperature: +5°C (Chicago, 9 a.m.)",Race-day weather,5.327502801253785,1.8426546992446031,8.812350903262967,"Standardized annual mean, 26 race years"
+Humidity: +10 points RH (Chicago),Race-day weather,-0.827443516733477,-4.327378208390927,2.6724911749239726,Adjusted for temperature and wind; inconclusive

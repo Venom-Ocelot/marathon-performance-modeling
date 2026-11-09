@@ -10,6 +10,7 @@ An observational statistics project exploring how weather, demographics, pacing,
 - **[Statistical story](marathon_story.html)** — an integrated report with embedded charts. Download the HTML file and open it in a browser; GitHub displays its source.
 - **[Figures and tables](outputs/)** — standalone charts, aggregate CSV tables, and calculated JSON results.
 - **[Data sources and attribution](docs/DATA_SOURCES.md)** — versions, licenses as listed, exclusions, and overlap between sources.
+- **[Supplementary analyses](docs/SUPPLEMENTARY.md)** — gap trends, a one-scale factor comparison, published-research comparison, and weather discussion; `make supplementary` runs them without raw data.
 
 The [Berlin-only report](berlin_story.html) preserves the initial study. The integrated report contains the broader findings.
 
